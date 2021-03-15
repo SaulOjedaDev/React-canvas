@@ -10,6 +10,12 @@ const ColorButton = styled.button`
   align-self: center;
   border: 0.05px solid #580c60;
   cursor: pointer;
+  &:active {
+    outline: none;
+  }
+  &:focus {
+    outline: 0;
+  }
 `;
 
 /**

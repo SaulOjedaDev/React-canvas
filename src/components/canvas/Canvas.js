@@ -7,6 +7,8 @@ const StyledCanvas = styled.canvas`
   background: #fff;
   border: 1px solid #580c60;
   cursor: crosshair;
+  width: 100%;
+  height: 100%;
   -webkit-box-shadow: 5px 0px 27px -2px rgba(90, 85, 98, 0.72);
   box-shadow: 5px 0px 27px -2px rgba(90, 85, 98, 0.72);
 `;
