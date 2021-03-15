@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/React-canvas/static/css/main.fbdcc219.chunk.css",
+    "main.js": "/React-canvas/static/js/main.9639dad2.chunk.js",
+    "main.js.map": "/React-canvas/static/js/main.9639dad2.chunk.js.map",
+    "runtime-main.js": "/React-canvas/static/js/runtime-main.d3edbdf3.js",
+    "runtime-main.js.map": "/React-canvas/static/js/runtime-main.d3edbdf3.js.map",
+    "static/js/2.d49f9349.chunk.js": "/React-canvas/static/js/2.d49f9349.chunk.js",
+    "static/js/2.d49f9349.chunk.js.map": "/React-canvas/static/js/2.d49f9349.chunk.js.map",
+    "static/js/3.0a68923f.chunk.js": "/React-canvas/static/js/3.0a68923f.chunk.js",
+    "static/js/3.0a68923f.chunk.js.map": "/React-canvas/static/js/3.0a68923f.chunk.js.map",
+    "index.html": "/React-canvas/index.html",
+    "static/css/main.fbdcc219.chunk.css.map": "/React-canvas/static/css/main.fbdcc219.chunk.css.map",
+    "static/js/2.d49f9349.chunk.js.LICENSE.txt": "/React-canvas/static/js/2.d49f9349.chunk.js.LICENSE.txt",
+    "static/media/brush-icon.5029e6c9.svg": "/React-canvas/static/media/brush-icon.5029e6c9.svg",
+    "static/media/delete-icon.86bb3836.svg": "/React-canvas/static/media/delete-icon.86bb3836.svg",
+    "static/media/download-icon.2a5c8749.svg": "/React-canvas/static/media/download-icon.2a5c8749.svg",
+    "static/media/eraser-icon.b6810f4e.svg": "/React-canvas/static/media/eraser-icon.b6810f4e.svg",
+    "static/media/pencil-icon.249fb4c7.svg": "/React-canvas/static/media/pencil-icon.249fb4c7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3edbdf3.js",
+    "static/js/2.d49f9349.chunk.js",
+    "static/css/main.fbdcc219.chunk.css",
+    "static/js/main.9639dad2.chunk.js"
+  ]
+}
