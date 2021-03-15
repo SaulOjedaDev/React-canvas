@@ -98,6 +98,7 @@ export default function CanvasScreen() {
       canvas.stroke();
       setLastCoords({ x: coords.x, y: coords.y });
     }
+    return false;
   }
 
   // Function fired when the user unclick the mouse inside the canvas.
