@@ -106,7 +106,6 @@
 
 @media only screen and (max-width: 600px) {
   .root {
-    height: 90vh;
     grid-template-columns: 100%;
     grid-template-rows: 8% 92%;
     grid-template-areas:
