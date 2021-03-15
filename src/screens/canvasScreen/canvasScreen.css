@@ -101,7 +101,6 @@
   width: 0;
   height: 0;
   display: hidden;
-  touch-action: none;
 }
 
 @media only screen and (max-width: 600px) {

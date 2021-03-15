@@ -103,8 +103,7 @@ export default function CanvasScreen() {
   }
 
   // Function fired when the user unclick the mouse inside the canvas.
-  function handleStopDrawing(event) {
-    event.preventDefault();
+  function handleStopDrawing() {
     setIsDrawing(false);
   }
 
