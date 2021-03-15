@@ -198,7 +198,7 @@ export default function CanvasScreen() {
             <SmallScreenCanvasMenus
               colorSelected={brushSetting.color}
               toolSelected={toolSelected}
-              openColorDialog={() => setSelectColorDialog(!selectColorDialog)}
+              openColorDialog={() => setSelectColorDialog(true)}
               selectToolFunction={(tool) => setToolSelected(tool)}
               downloadFunction={handleDownloadCanvas}
             />
