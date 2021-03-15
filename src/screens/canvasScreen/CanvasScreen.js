@@ -83,6 +83,7 @@ export default function CanvasScreen() {
     canvas.moveTo(coords.x, coords.y);
     setLastCoords({ x: coords.x, y: coords.y });
     setIsDrawing(true);
+    return false;
   }
 
   // Function fired when the user muve the mouse inside the canvas.
