@@ -90,6 +90,7 @@ export default function CanvasScreen() {
   // Function fired when the user muve the mouse inside the canvas.
   function handleDrawing(event) {
     if (isDrawing) {
+      event.preventDefault();
       let canvas = canvasRef?.current?.getContext("2d");
       let coords = getPointerCoords(canvas, event);
       canvas.moveTo(lastCoords.x, lastCoords.y);
@@ -102,12 +103,14 @@ export default function CanvasScreen() {
   }
 
   // Function fired when the user unclick the mouse inside the canvas.
-  function handleStopDrawing() {
+  function handleStopDrawing(event) {
+    event.preventDefault();
     setIsDrawing(false);
   }
 
   // Function for change the brush color from a input [type="color"].
   function handleChangeColorSelected(event) {
+    event.preventDefault();
     setBrushSetting({ ...brushSetting, color: event.target.value });
   }
 
