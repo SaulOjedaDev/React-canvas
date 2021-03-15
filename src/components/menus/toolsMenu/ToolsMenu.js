@@ -6,12 +6,11 @@ import { ReactComponent as EraserIcon } from "../../../assets/icons/eraser-icon.
 import { ReactComponent as DeleteIcon } from "../../../assets/icons/delete-icon.svg";
 
 const Root = styled.div`
-  height: 50vh;
-  width: 13vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 2rem;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 14px;
   border: 1px solid #580c60;

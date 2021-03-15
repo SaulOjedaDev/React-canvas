@@ -25,8 +25,8 @@ const colors = [
 ];
 
 const Root = styled.div`
-  height: 50vh;
-  width: 13vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

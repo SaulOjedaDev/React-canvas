@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import "./canvasScreen.css";
 import AppHeader from "../../components/AppHeader";
 import ColorsMenu from "../../components/menus/colorsMenu/ColorsMenu";
@@ -6,9 +6,8 @@ import ToolsMenu from "../../components/menus/toolsMenu/ToolsMenu";
 import BrushSizeMenu from "../../components/menus/brushSizeMenu/BrushSizeMenu";
 import Canvas from "../../components/canvas/Canvas";
 import DownloadButton from "../../components/buttons/downloadButton/DownloadButton";
-
-const canvasHeight = 350;
-const canvasWidth = 700;
+import SmallScreenCanvasMenus from "../../components/menus/smallScreenCanvasMenus/SmallScreenCanvasMenus";
+import SelectColorDialog from "../../components/menus/selectColorDialog/SelectColorDialog";
 
 export default function CanvasScreen() {
   const [brushSetting, setBrushSetting] = useState({
@@ -21,6 +20,19 @@ export default function CanvasScreen() {
   const [toolSelected, setToolSelected] = useState("brush");
   const [lastCoords, setLastCoords] = useState({ x: 0, y: 0 });
   const [canvasRef, setCanvasRef] = useState(null);
+  const [canvasSize, setCanvasSize] = useState({ height: 150, width: 300 });
+  const [selectColorDialog, setSelectColorDialog] = useState(false);
+
+  const canvasContainerRef = useRef(null);
+
+  useEffect(() => {
+    if (canvasContainerRef?.current) {
+      let containerHeight = canvasContainerRef?.current?.offsetHeight;
+      let containerWidth = canvasContainerRef?.current?.offsetWidth;
+
+      setCanvasSize({ height: containerHeight, width: containerWidth });
+    }
+  }, [canvasContainerRef]);
 
   // Callback function for getting the canvas ref.
   const memoizedGetRefFunction = useCallback((ref) => {
@@ -35,10 +47,21 @@ export default function CanvasScreen() {
 
   // Helper function for getting the pointer coordenates when an event is fired in the canvas.
   function getPointerCoords(canvas, event) {
+    let coords = {};
     let rect = canvas?.canvas?.getBoundingClientRect();
-    let x = event.clientX - rect?.left;
-    let y = event.clientY - rect?.top;
-    return { x: x, y: y };
+    if (event.touches) {
+      coords = {
+        x: event.touches[0].clientX - rect?.left,
+        y: event.touches[0].clientY - rect?.top,
+      };
+    } else {
+      coords = {
+        x: event.clientX - rect?.left,
+        y: event.clientY - rect?.top,
+      };
+    }
+
+    return coords;
   }
 
   // Function fired when the user click the canvas.
@@ -88,7 +111,12 @@ export default function CanvasScreen() {
   // Function use to download the drawing in the canvas as an img.
   function handleDownloadCanvas() {
     let canvas = canvasRef?.current?.getContext("2d");
-    let imgData = canvas.getImageData(0, 0, canvasWidth, canvasHeight);
+    let imgData = canvas.getImageData(
+      0,
+      0,
+      canvasSize.width,
+      canvasSize.height
+    );
     let data = imgData.data;
     for (var i = 0; i < data.length; i += 4) {
       if (data[i + 3] < 255) {
@@ -107,34 +135,38 @@ export default function CanvasScreen() {
   }
 
   return (
-    <div className="root">
+    <div className="body">
       <section className="separator" />
-      <header className="header">
-        <AppHeader />
-      </header>
-      <main className="content">
-        <aside className="side-menu">
-          <ColorsMenu
-            selectColorFunction={(color) =>
-              setBrushSetting({ brushSetting, color: color })
-            }
-            changePickerFunction={handleChangeColorSelected}
-            colorSelected={brushSetting.color}
-          />
-        </aside>
-        <div className="center-div">
-          <div className="canvas">
+      <div className="root">
+        <header className="header">
+          <AppHeader />
+        </header>
+        <main className="content">
+          <aside className="color-menu">
+            <ColorsMenu
+              selectColorFunction={(color) =>
+                setBrushSetting({ brushSetting, color: color })
+              }
+              changePickerFunction={handleChangeColorSelected}
+              colorSelected={brushSetting.color}
+            />
+          </aside>
+
+          <div className="canvas" ref={canvasContainerRef}>
             <Canvas
+              height={canvasSize.height}
+              width={canvasSize.width}
               getRefFunction={memoizedGetRefFunction}
-              width={canvasWidth}
-              height={canvasHeight}
               onMouseDown={handleCanvasClick}
               onMouseMove={handleDrawing}
               onMouseUp={handleStopDrawing}
+              onTouchStart={handleCanvasClick}
+              onTouchMove={handleDrawing}
+              onTouchEnd={handleStopDrawing}
               onMouseLeave={handleStopDrawing}
             />
           </div>
-          <section className="canvas-bottom-menus">
+          <section className="bottom">
             <div className="brush-size-menu">
               <BrushSizeMenu
                 sizeSelected={brushSetting.size}
@@ -144,21 +176,43 @@ export default function CanvasScreen() {
                 toolSelected={toolSelected}
               />
             </div>
-            <div className="grow-div" />
+
             <div className="download-button">
               <DownloadButton onClick={handleDownloadCanvas} />
             </div>
           </section>
+
+          <aside className="tool-menu">
+            <ToolsMenu
+              toolSelected={toolSelected}
+              selectFunction={(tool) => setToolSelected(tool)}
+              clearFunction={clearCanvas}
+            />
+          </aside>
+          <div className="small-menus-container">
+            <SmallScreenCanvasMenus
+              colorSelected={brushSetting.color}
+              toolSelected={toolSelected}
+              openColorDialog={() => setSelectColorDialog(!selectColorDialog)}
+              selectToolFunction={(tool) => setToolSelected(tool)}
+              downloadFunction={handleDownloadCanvas}
+            />
+          </div>
+        </main>
+        <div className="footer"></div>
+      </div>
+      {selectColorDialog && (
+        <div className="dialog">
+          {selectColorDialog && (
+            <SelectColorDialog
+              closeDialog={() => setSelectColorDialog(false)}
+              selectFunction={(color) =>
+                setBrushSetting({ ...brushSetting, color })
+              }
+            />
+          )}
         </div>
-        <aside className="side-menu">
-          <ToolsMenu
-            toolSelected={toolSelected}
-            selectFunction={(tool) => setToolSelected(tool)}
-            clearFunction={clearCanvas}
-          />
-        </aside>
-      </main>
-      <div className="footer"></div>
+      )}
     </div>
   );
 }
