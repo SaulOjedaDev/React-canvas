@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React-canvas/static/css/main.a7e9c60a.chunk.css",
+    "main.css": "/React-canvas/static/css/main.e9b61349.chunk.css",
     "main.js": "/React-canvas/static/js/main.6986b64c.chunk.js",
     "main.js.map": "/React-canvas/static/js/main.6986b64c.chunk.js.map",
     "runtime-main.js": "/React-canvas/static/js/runtime-main.81b21a39.js",
@@ -10,7 +10,7 @@
     "static/js/3.a0cf6517.chunk.js": "/React-canvas/static/js/3.a0cf6517.chunk.js",
     "static/js/3.a0cf6517.chunk.js.map": "/React-canvas/static/js/3.a0cf6517.chunk.js.map",
     "index.html": "/React-canvas/index.html",
-    "static/css/main.a7e9c60a.chunk.css.map": "/React-canvas/static/css/main.a7e9c60a.chunk.css.map",
+    "static/css/main.e9b61349.chunk.css.map": "/React-canvas/static/css/main.e9b61349.chunk.css.map",
     "static/js/2.07757c66.chunk.js.LICENSE.txt": "/React-canvas/static/js/2.07757c66.chunk.js.LICENSE.txt",
     "static/media/brush-icon.5029e6c9.svg": "/React-canvas/static/media/brush-icon.5029e6c9.svg",
     "static/media/delete-icon.86bb3836.svg": "/React-canvas/static/media/delete-icon.86bb3836.svg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.81b21a39.js",
     "static/js/2.07757c66.chunk.js",
-    "static/css/main.a7e9c60a.chunk.css",
+    "static/css/main.e9b61349.chunk.css",
     "static/js/main.6986b64c.chunk.js"
   ]
 }
