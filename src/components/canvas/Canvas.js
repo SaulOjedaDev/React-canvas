@@ -11,6 +11,7 @@ const StyledCanvas = styled.canvas`
   height: 100%;
   -webkit-box-shadow: 5px 0px 27px -2px rgba(90, 85, 98, 0.72);
   box-shadow: 5px 0px 27px -2px rgba(90, 85, 98, 0.72);
+  overflow: hidden;
 `;
 
 /**
