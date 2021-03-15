@@ -66,6 +66,7 @@ export default function CanvasScreen() {
 
   // Function fired when the user click the canvas.
   function handleCanvasClick(event) {
+    event.preventDefault();
     let canvas = canvasRef?.current?.getContext("2d");
     let coords = getPointerCoords(canvas, event);
 
