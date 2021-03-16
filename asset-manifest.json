@@ -1,29 +1,37 @@
 {
   "files": {
-    "main.css": "/React-canvas/static/css/main.ed921870.chunk.css",
-    "main.js": "/React-canvas/static/js/main.3d6407d9.chunk.js",
-    "main.js.map": "/React-canvas/static/js/main.3d6407d9.chunk.js.map",
+    "main.css": "/React-canvas/static/css/main.aeb9d11b.chunk.css",
+    "main.js": "/React-canvas/static/js/main.6535a364.chunk.js",
+    "main.js.map": "/React-canvas/static/js/main.6535a364.chunk.js.map",
     "runtime-main.js": "/React-canvas/static/js/runtime-main.81b21a39.js",
     "runtime-main.js.map": "/React-canvas/static/js/runtime-main.81b21a39.js.map",
-    "static/js/2.07757c66.chunk.js": "/React-canvas/static/js/2.07757c66.chunk.js",
-    "static/js/2.07757c66.chunk.js.map": "/React-canvas/static/js/2.07757c66.chunk.js.map",
+    "static/js/2.d1acb184.chunk.js": "/React-canvas/static/js/2.d1acb184.chunk.js",
+    "static/js/2.d1acb184.chunk.js.map": "/React-canvas/static/js/2.d1acb184.chunk.js.map",
     "static/js/3.a0cf6517.chunk.js": "/React-canvas/static/js/3.a0cf6517.chunk.js",
     "static/js/3.a0cf6517.chunk.js.map": "/React-canvas/static/js/3.a0cf6517.chunk.js.map",
     "index.html": "/React-canvas/index.html",
-    "static/css/main.ed921870.chunk.css.map": "/React-canvas/static/css/main.ed921870.chunk.css.map",
-    "static/js/2.07757c66.chunk.js.LICENSE.txt": "/React-canvas/static/js/2.07757c66.chunk.js.LICENSE.txt",
+    "static/css/main.aeb9d11b.chunk.css.map": "/React-canvas/static/css/main.aeb9d11b.chunk.css.map",
+    "static/js/2.d1acb184.chunk.js.LICENSE.txt": "/React-canvas/static/js/2.d1acb184.chunk.js.LICENSE.txt",
     "static/media/brush-icon.5029e6c9.svg": "/React-canvas/static/media/brush-icon.5029e6c9.svg",
+    "static/media/circle-icon.4b29cc6c.svg": "/React-canvas/static/media/circle-icon.4b29cc6c.svg",
+    "static/media/colorize-icon.08e042a3.svg": "/React-canvas/static/media/colorize-icon.08e042a3.svg",
     "static/media/delete-icon.86bb3836.svg": "/React-canvas/static/media/delete-icon.86bb3836.svg",
     "static/media/download-icon.2a5c8749.svg": "/React-canvas/static/media/download-icon.2a5c8749.svg",
     "static/media/eraser-icon.b6810f4e.svg": "/React-canvas/static/media/eraser-icon.b6810f4e.svg",
+    "static/media/fill-icon.693923e7.svg": "/React-canvas/static/media/fill-icon.693923e7.svg",
+    "static/media/line-icon.4d02e0ce.svg": "/React-canvas/static/media/line-icon.4d02e0ce.svg",
     "static/media/navigate_before-icon.2254642c.svg": "/React-canvas/static/media/navigate_before-icon.2254642c.svg",
     "static/media/navigate_next-icon.00940e89.svg": "/React-canvas/static/media/navigate_next-icon.00940e89.svg",
-    "static/media/pencil-icon.249fb4c7.svg": "/React-canvas/static/media/pencil-icon.249fb4c7.svg"
+    "static/media/pen-tool-icon.1fcded0d.svg": "/React-canvas/static/media/pen-tool-icon.1fcded0d.svg",
+    "static/media/pencil-icon.249fb4c7.svg": "/React-canvas/static/media/pencil-icon.249fb4c7.svg",
+    "static/media/redo-icon.fb68544f.svg": "/React-canvas/static/media/redo-icon.fb68544f.svg",
+    "static/media/square-icon.604eb567.svg": "/React-canvas/static/media/square-icon.604eb567.svg",
+    "static/media/undo-icon.c27dcf64.svg": "/React-canvas/static/media/undo-icon.c27dcf64.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.81b21a39.js",
-    "static/js/2.07757c66.chunk.js",
-    "static/css/main.ed921870.chunk.css",
-    "static/js/main.3d6407d9.chunk.js"
+    "static/js/2.d1acb184.chunk.js",
+    "static/css/main.aeb9d11b.chunk.css",
+    "static/js/main.6535a364.chunk.js"
   ]
 }
